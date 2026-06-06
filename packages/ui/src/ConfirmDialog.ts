@@ -30,6 +30,7 @@ export class ConfirmDialog extends Widget {
         this._borderColor = options.borderColor ?? { type: 'named', name: 'yellow' };
         this._onConfirm = options.onConfirm;
         this._onCancel = options.onCancel;
+        this.events.on('key', (event) => this.handleKey(event));
     }
 
     get visible(): boolean { return this._visible; }
@@ -49,6 +50,8 @@ export class ConfirmDialog extends Widget {
         if (event.key === 'escape') {
             this.selectCancel();
             this.confirm();
+            event.preventDefault();
+            event.stopPropagation();
         }
     }
 
