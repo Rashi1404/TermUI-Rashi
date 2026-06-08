@@ -223,3 +223,5 @@ export type {
     ProgressProps,
     ProgressTask,
 } from './feedback/Progress.js';
+export { Badge } from './display/Badge.js';
+export { Badge } from './display/Badge.js';
