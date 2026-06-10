@@ -215,3 +215,7 @@ export type { ListbarOptions, ListbarItem } from './Listbar.js';
 
 export { validateInput } from './validation.js';
 export type { InputValidator } from './validation.js';
+
+// -- External Theme / Stylesheet Engine --
+export * from '@termuijs/tss';
+
