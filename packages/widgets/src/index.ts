@@ -310,3 +310,5 @@ export { UnorderedList } from './display/UnorderedList.js';
 export type { UnorderedListOptions } from './display/UnorderedList.js';
 export { Rule } from './display/Rule.js';
 export type { RuleOrientation, RuleOptions } from './display/Rule.js';
+export { Spinner } from './Spinner'
+export type { SpinnerProps } from './Spinner'
