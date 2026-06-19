@@ -33,6 +33,29 @@ The Imperative API is the foundation of TermUI. You work directly with classes a
 - You need the **absolute lowest overhead** and maximum performance.
 - You prefer **Object-Oriented Programming** and want to manage state in class properties.
 
+### Common use case: Custom widget
+
+When building a reusable widget (e.g., a progress bar) for others to import:
+
+```typescript
+import { Widget, Style } from '@termuijs/core'
+
+export class ProgressBar extends Widget {
+  private progress: number = 0
+  
+  setProgress(value: number) {
+    this.progress = Math.max(0, Math.min(1, value))
+    this.markDirty() // Request re-render
+  }
+  
+  render(buffer) {
+    const width = this.rect.width
+    const filled = Math.round(width * this.progress)
+    const bar = '█'.repeat(filled) + '░'.repeat(width - filled)
+    buffer.write(0, 0, bar, Style.fg('green'))
+  }
+}
+
 ### Example: Imperative Counter
 
 ```typescript
