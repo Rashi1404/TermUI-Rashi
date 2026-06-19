@@ -42,6 +42,10 @@ export { PerformanceOverlay } from './display/PerformanceOverlay.js';
 export { computeRange, computeVariableRange } from './input/virtual-scroll.js';
 export type { ScrollRange } from './input/virtual-scroll.js';
 
+// ─────────────────────────────────────────────────────
+
+
+
 // ── Input Widgets ─────────────────────────────────────
 export { List } from './input/List.js';
 export type { ListItem, ListProps } from './input/List.js';
@@ -203,6 +207,9 @@ export type { CarouselOptions } from './display/Carousel.js';
 
 export { Tooltip } from './display/Tooltip.js';
 export type { TooltipOptions } from './display/Tooltip.js';
+
+export { ContextMenu } from './display/ContextMenu.js';
+export type { ContextMenuOptions } from './display/ContextMenu.js';
 
 export { Panel } from './layout/Panel.js';
 export { Clock } from './display/Clock.js';
